@@ -51,17 +51,30 @@ General rules for constructing names for variables (unique identifers) are:
 -reserved words cannot be used as names
 *identifers are case-sensitive
 JavaScript Assignment
-The Addition Assignment Operator
+The Addition Assignment Operator +
 -In JavaScript the equal sign(=) is an "assignment" operator
 x= x+5
 -it assigns the value of x + 5  to x
 -it calculates the value of x+5 and puts the result into x ,the value of x is incremented by 5
 -Adds value to a variable
-The Subtration Assignment Operator
+The Subtration Assignment Operator -
 -subtracts value from a variable
 let x = 10;
 x -= 5;
+The Multiple Assignment Operator *
+-multiple a variable
+The Exponentation Operator **
+-raises a variable to the power of the operand
 Data Types(JavaScript)
+-JavaScript has eight datatypes
+*string-A string (or a text string) is a series of characters like "John Doe".
+* number- All JavaScript numbers are stored as decimal numbers (floating point).
+* bignit-All JavaScript numbers are stored in a a 64-bit floating-point format
+* undefined-In JavaScript, a variable without a value, has the value undefined. The type is also undefined.
+* boolean-Booleans can only have two values: true or false.
+* null-
+* symbol-
+* object -JavaScript objects are written with curly braces {}.
 -JavaScript variables can hold numbers like 100 and text values like like "John Doe"
 -In programming ,text values are called text strings , strings are written inside double or single quotes and numbers are written without quotes , if you written in quotes it will be treated as a text string .
 Declaring a JavaScript Variable
