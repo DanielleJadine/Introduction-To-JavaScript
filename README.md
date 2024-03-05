@@ -86,4 +86,7 @@ Value= Undefined
 -A variable declared without a value will have the value undefined
 RE-declaring JavaScript Variables
 - If you re-daclare a JavaScript  variable declared with var it will not lose its value
+Day2
+JavaScript Basics
+
  
