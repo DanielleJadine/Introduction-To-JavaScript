@@ -1,5 +1,5 @@
 # Introduction-To-JavaScript
-DAY 1
+# DAY 1
 What is Javascript?
 -JavaScript is one of the most popular and widely used programming language in the world ,it is also one of the three pilars of the web of whic the other two are CSS and HTML .
 -JavaScript was purposely designed to intergrate into HTML.
@@ -86,7 +86,43 @@ Value= Undefined
 -A variable declared without a value will have the value undefined
 RE-declaring JavaScript Variables
 - If you re-daclare a JavaScript  variable declared with var it will not lose its value
-Day2
+# Day2
 JavaScript Basics
+JavaScript has eight Datatypes of which on this day we speak about two of them which are ;
+STRINGS AND ARRAYS
+# Strings
+Strings are for storing text, and are written in quotes .
+A JavaScript string is zero or more characters written inside quotes -you can use single or double quotes .
+JavaScript strings are primitive and immutable ,all string methods produces a new string without altering the orginal string.
+# Arrays
+JavaScript arrays are written with square brackets ,arrays are items that are separated by commas
+Arrays are a special type of objects. The typeof operator in JavaScript returns "object" for arrays.
+But, JavaScript arrays are best described as arrays.
+Arrays use numbers to access its "elements".Objects use names to access its "members"
+# Day3
+Functions
+A function is a group of reuseable code which can be called anywhere in your program . This eliminates the need of writing the same code again and again ,it helps programmes in writing modular codes.
+Functions allow a programmer to divide a big program into a number of small and manageable functions ,like any other advanced programming language JavaScript also supports all the features necessary to write modular code using functions .
+You must have seen fuctions like alert() and write () in the earlier chapters, we were using these functions again and again, but they had been written in core JavaScript only once.
+JavaScript allows us to write our own functions as well ,this section explains how to write your own functions in JavaScript .
+Function Definition
+Before we use a function ,we need to define it and the most common way to define a function in JavaScript is by using the function keyword followed by a unique function name a list of parameters (that might be empty) and a statement block surrounded by curly braces.
+Syntax
+The basic syntax is shoown here 
+<script type="text/javascript">
+   <!---
+      function functionname(parameter-list){
+         statements
+      }
+   //--->
+   Example
+   try the folowing example as it defines a function called sayHello that takes no parametrs-
+      <script type="text/javascript">
+      <!--
+      function sayHello.(){
+         alert("Hello there");
+      }
+   //-->
+      </script>
 
  
