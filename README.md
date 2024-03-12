@@ -1,8 +1,12 @@
 # Introduction-To-JavaScript
-# DAY 1
+# DAY 1-5
 What is Javascript?
 -JavaScript is one of the most popular and widely used programming language in the world ,it is also one of the three pilars of the web of whic the other two are CSS and HTML .
 -JavaScript was purposely designed to intergrate into HTML.
+JavaScript Arithmetic Operators
+Arithmetic operators are used to perform artimetic on numbers (literals or variables), a typical arithmetic operation operates on two numbers .
+Operates and operands
+the numbers (in an arthmetc operation) are called operands and te operation (to be performed between the two operands) is defined by an operator
 What does JavaScript do?
 -It programs around the web 
 -Creates interactivity (allows things that were previously in the early days of the web generally static)
@@ -86,7 +90,12 @@ Value= Undefined
 -A variable declared without a value will have the value undefined
 RE-declaring JavaScript Variables
 - If you re-daclare a JavaScript  variable declared with var it will not lose its value
-# Day2
+The Object Datatype
+the object data type can contain
+1. An object
+2. An array
+3. A date
+
 JavaScript Basics
 JavaScript has eight Datatypes of which on this day we speak about two of them which are ;
 STRINGS AND ARRAYS
@@ -99,7 +108,7 @@ JavaScript arrays are written with square brackets ,arrays are items that are se
 Arrays are a special type of objects. The typeof operator in JavaScript returns "object" for arrays.
 But, JavaScript arrays are best described as arrays.
 Arrays use numbers to access its "elements".Objects use names to access its "members"
-# Day3
+
 Functions
 A function is a group of reuseable code which can be called anywhere in your program . This eliminates the need of writing the same code again and again ,it helps programmes in writing modular codes.
 Functions allow a programmer to divide a big program into a number of small and manageable functions ,like any other advanced programming language JavaScript also supports all the features necessary to write modular code using functions .
@@ -108,7 +117,7 @@ JavaScript allows us to write our own functions as well ,this section explains h
 Function Definition
 Before we use a function ,we need to define it and the most common way to define a function in JavaScript is by using the function keyword followed by a unique function name a list of parameters (that might be empty) and a statement block surrounded by curly braces.
 Syntax
-The basic syntax is shoown here 
+The basic syntax is shown here 
 <script type="text/javascript">
    <!---
       function functionname(parameter-list){
@@ -124,5 +133,91 @@ The basic syntax is shoown here
       }
    //-->
       </script>
+      
+Booleans
+-Booleans are values that can only be one of two things :true or false
+-Anything on or off ,yes or no or temporary is usually good fit for a boolean ,however it is useful to store booleans in variables to keep track of their values and change them over time
+example:
+var kitchenLights=false;
+kitchenLights=true;
+kitchenLights;
+Output:
+true
+Comparing two JavaScript objects always return false.
+The Boolean() Function
+You can use the Boolean() function to find out if an expression (or a variable) is true:
+Boolean(10 > 9)
+The Boolean value of an expression is the basis for all JavaScript comparisons and conditions.
+Operator	Description	Example
+==	        equal to	                 if (day == "Monday")
+>	             greater than	                 if (salary > 9000)
+<	              less than	                             if (age < 18)
+Everything With a "Value" is True , however everything without a "Value" is False
+Normally JavaScript Booleans are primitive values created from literals:
+let x = false;
+But Booleans can also be defined as objects with the keyword new:
+let y = new Boolean(false);
+ # Week 2
+ Day1-5
+ Type Conversions
+ -Most of the time,operators and functions automatically convert the values given to them to the righ type for example,alert automatically converts any value to a string to show it.
+ -Mathematical operations convet values to numbers,there are also cases when we need to explicity convert a value to the expected type.
+ String Conversion
+ String conversion happens when we need the string form of a value  for example ,alert (value) does it to show the value ,we can also call the string(value) function to convert a value to a string .
+ String conversion is mostly obvious ,a false becomes "null" etc.
+ Numeric Conversion
+ Numeric conversion happens in mathematical functions and expressions automatically for example ,when division / is applied to non-numbers:
+ alert("6"/"2"); //3  ,strings are converted to numbers  ,we can use the Number (value) function to explicitly convert a vale to a number 
+ let str="123";
+ alert(typeOfStr);//string
+ let num=Number(str);//becomes a number123
+ alert(typeOfnum);//number
+ Explicit conversion is usually required when we read a value from a string-based source like a text form but expect a number to be entered,if the string is not a valid number the result of such a conversion is NaN.For instance:
+ letage=Number("an arbitary string instead of a number");
+ alert(age);//NaN ,conversion failed.
+ Numeric conversion rules:
+ VALUE
+ -undefined-becames NaN
+ -null-becames 0
+ -true and false-becomes 1 and 0
+ -string-becomes whitespaces from the start and end are removed,if the remaining string is empty the result is 0, otherwise the number is "read" from the string  , an error gives NaN.
+ Examples:
+ alert(Number("123"));//123 string.An eeror gives NaN.
+ alert(number(123z));//NaN (error reading a number at "Z")
+ alert(Number(false));//0
+ Please note that null and undefined behave differently here; null becomes zero while undefined becomes NaN.
+ Most mathematical operators also perform such conversion , we`ll see that in the next chapter .
+ Boolean Conversion
+ Boolean conversion is the simplest one , it happens in logical operations but can also be performed explicitly with a call to boolean(value)
+ The conversion rule:
+ -Values that are intuitively "empty" , like 0 , an empty string ,null , undefined and NaN becomes false, other values become true .
+ Formatting Numbers 
+ JavaScript Number format: Main tips
+ -several JavaScript number format methods are offered with this language that you can use to manipulate new values instead of changing the one being used for the method.
+ -every javascript number format method may be used on any type of number, including literals , variables , expressions.
+ Methods used for numbers
+ There are a few JavaScript number format methods to keep in mind if you want to manipulate and change numeric values , these are the go-to methods while working with numeric values.
+ However , some JavaScript number format methods are specifically used on numbers only  .
+ toExponential()
+ -toExponential () turns numbers into strings as well , but in addition to that , the number that is returned is also rounded and written with exponential notation , you can also have access to a parameter , which is used to define the nmber of digits after a decimal point .
+ -The JavaScript to fixed() also turns the number into a string , but with a specific amount of decimals this time ,the number of decimals should be specified in the parentheses after the methods name.
+ toPrecision
+ -the toPrecision () also turns the number into a string , but with a specified inside the parenthese after the methods name, it is quite similar to JavaScript to fixed() method but counts all numbers not only decimals .
+ Converting variables to Numbers
+ -if you find yourself in need to turn a variable into a number ,these are the three methods you can use ;
+ Number()
+ Parselnt()
+ Parsefloat()
+ Note:these are global JavaScript methods , not number methods , therefore tey can be used eveywhere not only in numeric values.
+ Number()
+ Number() method is widely used to convert JavaScrpt variables into numbers , although if a number cannot be returned , the program will return NaN (Not a Number)
+ If you want to create a JavaScript integer you should use parselnt()  , 
+ 
+ 
+ 
+ 
+
+
+
 
  
