@@ -222,8 +222,48 @@ let y = new Boolean(false);
  The Document Object Model is an Application programming interface(API) for HTML and XML documents ,it does two things for web developers
  -Provides a structural representation of the document.
  -Defines the way that the structure is to be accessed from script.
- This allows you to get at the web page as a group of nodes,essentially it connects web pages to scripts or programming languages
- 
+ This allows you to get at the web page as a group of nodes,essentially it connects web pages to scripts or programming languages,the JavaScript syntax has to do with objects to access an object ,property, or method its refernce must include every object that contain it separated by a dot its called the "dot. syntax"
+ Lets difine the terms introduced above.
+ # OBJECT
+ -A JavaScript object is any scriptable HTML element that may be accessed through the JavaScript language,although the browser window is not an HTML element it too is a scriptable object ,outside the context of a web page are core objects these objects are not associated with HTML elements but with the language itself.
+ -Then there are the homemade objects are both associated with the JavaScript object model.
+ The following are some of the JavaScript objects :
+ *window
+ *document
+ *form
+ *image
+ # PROPERTY
+ - Objects have properties which you can think of as characteristics of an object, a JavaScript property has a similar relationship to the object it belongs to that an HTML tag attribute has to the tag that contains it e.g. , the JavaScript "value" property is to a text field object as the HTML "width" attribute is to a table tag.
+ - There is one major exception :JavaScript properties can also be be objects ,in that case the object-property relationship is more like the relationship an<option> tag has to the <select> tag that contains it but in JavaScript there is no difference in how you refer to a plain old property and a property that is also an object.
+  -A document , although contained by te window and therefore a property of the window object is also considered an object,the same is true for a form and an image-they are properties of the document object but also objects themselves.
+   -The rule for the dual identities is this: a property is also an object if that-property has its own properties and methods ,its best to think of objects that way its clear what you may and may not do with them.
+   # Method
+   -Methods are actions that can be applied directly to objects within a web page methods cause a boring old HTML document to react to the end user, this results in a a meaningful experience for the end user which would otherwise be completely one-sided.
+   # Method Parameters
+   - Syntacically speaking methods are signified by parenthesis immediately  following their name e.g. alert(), these parenthesis sometimes hold values called parameters which are required by some methods
+ -A parameter is simply information needed by a method in order to accomplish its task ,for instance the alert() methods pop up an alert box without a parameter the alert method will generate a dialo box(using in Internet Explorer) alert() which is meaningless ,but with a parameter the alert method will generate a dialog box alert("Hello World") which communicates a messages to the end user.
+-Here are a few JavaScript methods:
+-alert()causes an alert dialog box appear over the page that launched it
+-write() writes content to a page.
+-focus()causes the mouse cursor to be inserted into a form element .
+Notice the parenthesis following the above methods?That is how you distinguish a method from a property or object .
+NB:Please note that these definitions are given in the context of web web programming ,they may also be loosely be used to define the terms in Java as well.
+Core APIs in the DOM
+-document and window objects are the objects whose interfaces you generally use the most often in DOM programming ,In simple terms the window objet represents something like the browser and the document object is the root of the document itself.
+-Element inherits from the generic node interface and together these two interfaces provide many of the methods and properties you use an individual elements
+The following is a brief list of common APIs in web and XML page scripting using the DOM
+-document.getElementById(id)
+-document.getElementByTagName(name)
+-document.CreateElement(name)
+-parentNode.appendChild(node)
+-element.innerHTML
+-element.setAttribute
+-element.getAttribute
+-element.addEventListener
+-window._content
+-window._onload
+-window._dump()
+-window._ScrollTo()
  
  
  
