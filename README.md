@@ -211,7 +211,18 @@ let y = new Boolean(false);
  Note:these are global JavaScript methods , not number methods , therefore tey can be used eveywhere not only in numeric values.
  Number()
  Number() method is widely used to convert JavaScrpt variables into numbers , although if a number cannot be returned , the program will return NaN (Not a Number)
- If you want to create a JavaScript integer you should use parselnt()  , 
+ If you want to create a JavaScript integer you should use parselnt()  , it works bu parsing a string and then returning the number .
+ Spaces may be present in the string but only the first number will be returned.
+ JavaScript Number format:Summary
+ -JavaScript number format can be changed through various methods into multiple different values .
+ -Most popular methods are Number() ,parselnt() , an parseFloat().
+ -If you want JavaScript to convert to integer, you should use parselnt() method.
+ -Each time JavaScript converts to integer, it returns a new value instead of rewriting.
+ # The Document Object Model
+ The Document Object Model is an Application programming interface(API) for HTML and XML documents ,it does two things for web developers
+ -Provides a structural representation of the document.
+ -Defines the way that the structure is to be accessed from script.
+ This allows you to get at the web page as a group of nodes,essentially it connects web pages to scripts or programming languages
  
  
  
