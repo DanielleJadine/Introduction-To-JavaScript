@@ -264,6 +264,67 @@ The following is a brief list of common APIs in web and XML page scripting using
 -window._onload
 -window._dump()
 -window._ScrollTo()
+# Functions in Action
+A function is a subprogram designed a particular task, a function will only evecute if and only when it has been called (invoking a function) values can be passed into functions and used within that function as well and all functions should have a return value otherwise they become undefined (value is unknown ) but most importantly you must know that a function is an object(an HTML element ,with properties and methods) A function declaration is as follows
+function name(parameters){
+statements
+}
+-Name is the unique name of the function ,all function names in a script must be unique .
+-Parameters one or more parameter variables you pass to the function.
+-Statements are the instructions carried out by the function ,you can put mosly anything here.
+# Calling a function with an event handler
+A common way of calling a function is to include a refernce to it in a form button or hypertext link , processing a user-defined function when the user clicks a form button is perphaps the easiet of all you use onClick event handler to tell JavaScript that when the user clicks on the button the function specified should be processed .
+JavaScript Methods and "this" keyword ,In JavaScript, objects can also contain functions e.g 
+//objects containing method 
+let person= {
+name:`john`
+greet:function(){
+console.log(`hello`)
+}
+In the above example , a person object has a key (name and greet) and string value and a function has a function value .
+# Accessing object methods
+-You can access an object method by calling an object method using a dot notation ,the syntax is objectName.Methodkey().
+You can access a method by calling an objectName and a key for that method along with() and you can access property only by calling an objectName and a key ,if you try to access the method with only person greet it will give you a function definition.
+# JavaScript Built-in Methods
+In JavaScript there are many built-in methods e.g
+let number=`23.32`;
+let result=parselnt(number);
+console.log(result);//23
+Here , the parselnt() method of Number object is used to convert numeric string value to an integer value , adding a method to a JavaScript ,object you can also add a method in an object e.g 
+//creating an object
+let student={}; 
+//adding a property
+student.name=`John`;
+//adding a method
+student.greet=function() {
+console.log(`hello`);
+}
+//accessing a method 
+student.greet(),//hello
+In the above example, an example , an empty student object is created , then the name property is added similarly the greet method is also added in this way you can add a method as well as property to an object.
+# JavaScript this keyword
+-to access a property of an object from witin a method of the some object you need to use the keyword.
+# JavaScript Switch Statement
+-The switch statement is used to perform different actions based on different conditions.
+Syntax
+-switch(expression){
+case x:
+//code block
+break;
+case y:
+//code block
+break;
+default:
+//code block
+}
+This is how it works:
+-The switch expression is evaluated once.
+-The value of the expression is compared with values of each case.
+-If there is a match , the associated block is executed.
+-If there is no match , the default code block is executed.
+
+
+
  
  
  
