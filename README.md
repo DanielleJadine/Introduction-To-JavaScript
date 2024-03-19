@@ -157,8 +157,7 @@ Normally JavaScript Booleans are primitive values created from literals:
 let x = false;
 But Booleans can also be defined as objects with the keyword new:
 let y = new Boolean(false);
- # Week 2
- Day1-5
+ # Week 2 Day1-5
  Type Conversions
  -Most of the time,operators and functions automatically convert the values given to them to the righ type for example,alert automatically converts any value to a string to show it.
  -Mathematical operations convet values to numbers,there are also cases when we need to explicity convert a value to the expected type.
@@ -301,10 +300,15 @@ console.log(`hello`);
 }
 //accessing a method 
 student.greet(),//hello
+
 In the above example, an example , an empty student object is created , then the name property is added similarly the greet method is also added in this way you can add a method as well as property to an object.
+
 # JavaScript this keyword <br><br>
+
 -to access a property of an object from witin a method of the some object you need to use the keyword.
+
 # JavaScript Switch Statement
+
 -The switch statement is used to perform different actions based on different conditions.
 Syntax
 -switch(expression){
@@ -322,6 +326,20 @@ This is how it works:
 -The value of the expression is compared with values of each case.
 -If there is a match , the associated block is executed.
 -If there is no match , the default code block is executed.
+The break keyword
+-When JavaScript reaches a break keyword it breaks out of the switch block,this will stop the execution of inside te block so it is not necessary to break the last case in a switch block the block breaks (ends) there anyway.
+The default keyword
+-The default keyword specifies the code to run if there is no case match however if default is not the last case in the switch block, remember to end the default case with a break.
+Common Code Blocks.
+-Sometimes you will want different switch cases to use the same code .
+Switching Details
+-If multiple cases matches a case value , the first case is selected but if no cases are found the program continues to the default label however if there is no default label found the program continues to the statements after the switch.
+Strict Comparsion
+-Switch cases we use strict comparsion(===) ,the values must be of the same type to match .
+-A strict comparsion can only be ttrue if the perands are of the same type .
+The Window Object
+-The Window object represents a window in a browser , where as an object of window is created automatically by the browser and the window is the object of the browser not an object of JavaScript .
+-JavaScript objects are strings , arrays , date , .etc.
 
 
 
