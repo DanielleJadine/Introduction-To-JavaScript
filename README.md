@@ -302,7 +302,7 @@ console.log(`hello`);
 //accessing a method 
 student.greet(),//hello
 In the above example, an example , an empty student object is created , then the name property is added similarly the greet method is also added in this way you can add a method as well as property to an object.
-# JavaScript this keyword
+# JavaScript this keyword <br><br>
 -to access a property of an object from witin a method of the some object you need to use the keyword.
 # JavaScript Switch Statement
 -The switch statement is used to perform different actions based on different conditions.
