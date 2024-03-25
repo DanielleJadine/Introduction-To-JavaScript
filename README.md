@@ -300,15 +300,10 @@ console.log(`hello`);
 }
 //accessing a method 
 student.greet(),//hello
-
 In the above example, an example , an empty student object is created , then the name property is added similarly the greet method is also added in this way you can add a method as well as property to an object.
-
 # JavaScript this keyword <br><br>
-
 -to access a property of an object from witin a method of the some object you need to use the keyword.
-
 # JavaScript Switch Statement
-
 -The switch statement is used to perform different actions based on different conditions.
 Syntax
 -switch(expression){
@@ -340,6 +335,226 @@ Strict Comparsion
 The Window Object
 -The Window object represents a window in a browser , where as an object of window is created automatically by the browser and the window is the object of the browser not an object of JavaScript .
 -JavaScript objects are strings , arrays , date , .etc.
+# Week3 1-5
+# Strings operations
+-Strings in programming are sequences of characters. You can create strings in different ways: by just typing them out, using a constructor function called String(), or by using backticks for what's called a template literal.
+-You can access individual characters in a string using methods like charAt() or by treating the string like an array and accessing characters by their numerical index.
+-In JavaScript, you don't need a special function like in some other languages to compare strings. You can just use the less-than (<) or greater-than (>) operators. If you need to compare without considering uppercase or lowercase differences, you can use the localeCompare() method.
+-It's important to note that JavaScript treats strings created directly with quotes differently from those created with the String() function. However, JavaScript automatically converts between them when needed.
+When using eval(), there's a difference between passing a string directly and passing a string object. The code might behave unexpectedly if it receives a string object when it expects a simple string. But you can always convert a string object back to a simple string using the valueOf() method.
+-In simpler terms, you can create strings in different ways, access their characters, compare them, and convert between different types of string representations in JavaScript.
+Event handlers are like helpers for web elements that manage how they respond to user actions like clicks, key presses, or gaining focus. You can set them up in HTML attributes or through JavaScript properties. Each element can have one event handler per action. To handle multiple actions or events better, addEventListener() is preferred.
+# On hand Event handlers
+-Event handlers take parameters, and the this keyword refers to the element the handler is attached to. Their return value determines if the event should proceed.
+-When we talk about event handling, we might refer to functions or objects that respond to events, or specifically to methods of registering these listeners, like addEventListener() for more flexibility.
+# Event handler specifications
+-Event handlers are used to manage how elements react to user actions like clicks or key presses.
+-They can be set up in HTML attributes or through JavaScript properties.
+-Each HTML element, as well as document and window objects, can support specific event handlers.
+-Event handlers can handle various events like clicks (onclick), key presses (onkeydown), media playback (onplay), and many others.
+-These handlers are automatically called when certain events occur, like clicking on an element or pressing a key.
+-They can be used to perform actions or execute functions in response to user interactions.
+-Understanding event handlers is crucial for creating interactive and dynamic web applications.
+# Dynamic HTML
+Dynamic HTML (DHTML) involves combining CSS and JavaScript with HTML to create interactive web pages.
+-Changes on a webpage can be triggered by events, allowing for dynamic alterations such as font, color, style changes, and even content manipulation.
+-HTML objects can be modified in two primary ways:
+-Changing the class of the object to adjust its style.
+-Using the style property directly to modify the object's style.
+-JavaScript functions can be designed in various ways:
+-Directly referencing an object in the function using its ID to change its style.
+-Passing an object's ID as an argument to the function for flexible style changes.
+-Accessing objects based on the event that occurred, allowing for targeted changes based on user interactions.
+
+Static HTML Pages:
+-Static HTML pages are pre-defined and do not change based on user interactions.
+-Content is fixed and doesn't update without manual changes to the HTML file.
+-There is no interaction with the server or backend systems.
+-Basic HTML pages without scripting or dynamic content fall under this category.
+Dynamic HTML Pages:
+-Dynamic HTML pages change and update based on user interactions or server-side data.
+-Content can be modified without reloading the entire page.
+-Utilizes technologies like JavaScript, AJAX, and server-side scripting languages (e.g., PHP, Python) to generate content dynamically.
+-Allows for interactive features like form submissions, real-time updates, and data fetching from databases or APIs.
+-Offers a more engaging and responsive user experience compared to static pages.
+# Date Object
+-The Date object in JavaScript helps handle dates and times. It allows you to work with dates and times, like finding out the current date and time, or creating specific dates for your programs.
+Here's a simple explanation of the Date object with examples:
+Creating a Date object:
+-You can create a Date object using the new Date() constructor. If you don't pass any arguments, it will give you the current date and time.
+example:
+let currentDate = new Date();
+console.log(currentDate); // Output: current date and time
+-Specifying a specific date and time:
+-You can also create a Date object by passing specific parameters such as year, month, day, hour, minute, and second.
+eample:
+let specificDate = new Date(2024, 3, 25, 12, 30, 0); // Year, month (0-indexed), day, hour, minute, second
+console.log(specificDate); // Output: Mon Apr 25 2024 12:30:00 GMT+0000 (Coordinated Universal Time)
+Getting different components of a date:
+You can extract various components of a Date object like year, month, day, etc., using specific methods such as getFullYear(), getMonth(), getDate(), etc.
+example:
+console.log(currentDate.getFullYear()); // Output: current year
+console.log(currentDate.getMonth());    // Output: current month (0-indexed)
+console.log(currentDate.getDate());     // Output: current day of the month
+-Formatting dates:
+-You can format dates as strings using methods like toDateString(), toLocaleDateString(), toLocaleTimeString(), etc.
+example:
+console.log(currentDate.toDateString());        // Output: "Thu Mar 25 2024"
+console.log(currentDate.toLocaleDateString()); // Output: "3/25/2024"
+console.log(currentDate.toLocaleTimeString()); // Output: current time in local time format
+-Performing operations with dates:
+You can perform operations like adding or subtracting days, hours, etc., using methods like setDate(), setHours(), getTime(), etc.
+example:
+currentDate.setDate(currentDate.getDate() + 7); // Adding 7 days to the current date
+console.log(currentDate.toDateString());        // Output: Date increased by 7 days
+Overall, the Date object is handy for dealing with dates and times in JavaScript, allowing you to perform various operations and manipulations with ease.
+Retrieving the Date with get  
+-The Date object in JavaScript allows us to access different components of a date using various built-in methods.
+-These methods return each part of the date relative to the local timezone.
+-Each method starts with "get" and returns a relative number representing the specific component of the date.
+-Here's a summary of the "get" methods of the Date object:
+getFullYear(): Returns the year (YYYY) ranging from 1970 onwards.
+getMonth(): Returns the month from 0 to 11, where 0 represents January.
+getDate(): Returns the day of the month from 1 to 31.
+getDay(): Returns the day of the week from 0 to 6, where 0 represents Sunday.
+getHours(): Returns the hour from 0 to 23, where 0 represents midnight.
+getMinutes(): Returns the minute from 0 to 59.
+getSeconds(): Returns the second from 0 to 59.
+getMilliseconds(): Returns the millisecond from 0 to 999.
+getTime(): Returns the milliseconds since Epoch time.
+# Dynamic Events
+The Date object in JavaScript offers methods starting with "get" to access date components, returning associated numbers relative to the instantiated object.
+Corresponding to the "get" methods, there are "set" methods for modifying date components.
+"Set" methods allow for changing one or multiple components of a date.
+UTC methods, like getUTCFullYear(), provide date components based on the UTC standard, ensuring international time consistency.
+UTC methods mirror regular "get" methods but calculate based on Coordinated Universal Time.
+Adding or subtracting from a given date can be done with set methods, with values sometimes rolling over into the next or previous months for convenience.
+# Keyboard, forms and document/windows events
+# Keyboard Events
+Keydown Event (onkeydown):
+-Occurs when a user presses down a key.
+-Handled with the onkeydown event handler.
+Example:
+document.addEventListener('keydown', function(event) {
+    alert('Key down event occurred');
+});
+Keyup Event (onkeyup):
+-Occurs when a user releases a key.
+-Handled with the onkeyup event handler.
+Example:
+document.addEventListener('keyup', function(event) {
+    alert('Key up event occurred');
+});
+Keypress Event (onkeypress):
+-Occurs when a user presses down a key with a character value.
+-Certain keys like Ctrl, Shift, Alt, etc., do not generate this event.
+-Handled with the onkeypress event handler.
+Example:
+document.addEventListener('keypress', function(event) {
+    alert('Key press event occurred');
+});
+# Form Events
+Focus Event (onfocus):
+-Occurs when an element receives focus.
+-Handled with the onfocus event handler.
+Example:
+<input type="text" onfocus="this.style.backgroundColor='yellow'">
+Blur Event (onblur):
+-Occurs when an element loses focus.
+-Handled with the onblur event handler.
+Example:
+<input type="text" onblur="alert('Input lost focus')">
+Change Event (onchange):
+-Occurs when the value of a form element changes.
+-Handled with the onchange event handler.
+Example:
+<select onchange="alert('Option changed')">
+    <option value="1">Option 1</option>
+    <option value="2">Option 2</option>
+</select>
+Submit Event (onsubmit):
+-Occurs when a form is submitted.
+-Handled with the onsubmit event handler.
+Example:
+<form onsubmit="alert('Form submitted')">
+    <!-- Form inputs -->
+    <button type="submit">Submit</button>
+</form>
+ # Document/Windows Events
+  -The onload event is one of the most important events in web development. Here's more information on the onload event:
+What is the onload event?
+-The onload event occurs when a web page, including all its resources like images, scripts, stylesheets, etc., has finished loading in the web browser.
+Purpose of the onload event:
+-The onload event is used to execute JavaScript code or perform actions after the entire web page has been loaded, ensuring that all resources are available for manipulation or interaction.
+Common use cases:
+Initialization: You can use the onload event to initialize elements, set up event listeners, or perform any setup tasks required for the functionality of the page.
+Manipulation: You can modify elements, change styles, or dynamically load content based on the page's layout or state after it has fully loaded.
+Integration: It's often used to integrate third-party scripts or resources that require the full page to be loaded before they can be executed or interacted with.
+How to use the onload event:
+Inline HTML attribute: You can directly specify the onload event handler in the HTML element like <body onload="myFunction()">.
+DOM event listener: You can add an event listener for the load event on the window or specific elements using JavaScript.
+   example:
+window.onload = function() {
+    // Code to execute after page load
+};
+Example:
+Suppose you want to display a greeting message after the page has fully loaded:
+<body onload="displayGreeting()">
+<script>
+    function displayGreeting() {
+        alert("Welcome to our website!");
+    }
+</script>
+Best practices:
+-Keep JavaScript code related to the onload event minimal to avoid delaying the page load unnecessarily.
+-Consider using asynchronous loading techniques for resources that are not critical to the initial page rendering to improve performance.
+-Cross-browser compatibility:
+-The onload event is well-supported across modern web browsers, including Chrome, Firefox, Safari, Edge, and others.
+Load Event (onload):
+-Occurs when a web page finishes loading in the browser.
+-Handled with the onload event handler.
+Copy code
+<body onload="alert('Page loaded')">
+Unload Event (onunload):
+-Occurs when a user leaves the current web page.
+-Handled with the onunload event handler.
+Example:
+<body onunload="alert('Leaving page')">
+Resize Event (onresize):
+-Occurs when the browser window is resized.
+-Also occurs when the window is minimized or maximized.
+-Handled with the onresize event handler.
+Example:
+<body onresize="alert('Window resized')">
+# Creating a image-slider and wrapper with HTML,CSS and JavaScript
+ HTML:
+-Create a container (wrapper) to hold the image slider.
+-Inside the wrapper, create a div for the slider images and navigation buttons.
+CSS:
+-Style the slider wrapper, slider container, slider images, and navigation buttons.
+JavaScript:
+-Create functions to handle sliding between images.
+   Summary:
+-The HTML code creates a wrapper div .slider-wrapper to contain the slider and navigation buttons.
+-Inside the wrapper, a div .slider holds the slider images, and navigation buttons .prev and .next allow users to navigate through the slides.
+-CSS styles the wrapper, slider, images, and buttons for layout and appearance.
+-JavaScript code handles the sliding functionality by showing and hiding images based on the current slide index.
+-An interval is set to automatically advance slides every 2 seconds.
+-showSlides() function is called initially to display the first slide.
+# Week4 Day1-5
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
