@@ -541,9 +541,58 @@ JavaScript:
 -JavaScript code handles the sliding functionality by showing and hiding images based on the current slide index.
 -An interval is set to automatically advance slides every 2 seconds.
 -showSlides() function is called initially to display the first slide.
-# Week4 Day1-5
-
-
+ # Week4 Day1-5
+# Program flowchart
+-After a problem or opportunity has been analysed,the program to be used in solving the problem must be designed.
+-The result of this design process is a program flowchart ,the program flowchart illustrates the logic of the program and gives details on manipulating the data it is less costly to dtermine,arrange and rearrange complex logic on a flowchart than to correct logic errors in an implemented program.
+   -A program flowchart is vital if the program is to be maintained easily and efficiently or if modifications are necessary .
+   # Program flowchart symbols
+   -Program flowcharts are constructed with a set of standardised symbols that make it easier for persons other than the original programmer to read and maintain the program.
+   # JavaScript for Loop
+   -Loops can execute a block of code a number of times and are handy if you want to run the same code over and over again , each time with different values often this is the case when working with arrays .
+   Instead of writing:
+   text+=cars[0]+"<br>"
+   text+=cars[1]+"<br>"
+   text+=cars[3]+"<br>"
+   text+=cars[4]+"<br>"
+   text+=cars[5]+"<br>"
+You can write:
+var i;
+for(i=0;i<cars.length;i++){
+            text+=cars[i] + "<br>"
+}
+Different kinds of Loops.
+-JavaScript supports different kinds of loops :
+#for-loops through a block of code a number of lines
+#for/in-loops through the properties of an object.
+#for/of-loop through the value of an iterable object
+#while-loops through a block of code.
+#do/while-also loops through a block of code while a specified condition is true .
+   The for Loop
+   -The for Loop has the following syntax:
+for(statement1;statement2;statement3){
+   //code block to be excuted
+}
+Statement1 is executed(one time) before the execution of the code block
+Statement2 defines the condition for executing the code block.
+Statement3 is excuted(every time) after the code block has been executed.
+Example
+for(i=0;i<5;1++){
+   text+="The number is"+i+"<br>"
+}
+from the example above you can read :
+Statement1 sets a variable before the loop starts(var i=0).
+Statement2 defines the condition for the loop to run (i must be less then 5).
+Statement3 increases a value(i++) each time the code block in the loop has been executed.
+-Statement1 
+Normally you will use statement1 to initialize the variable used in the loop (i=0), this is not always the case , JavaScript doesnt care.
+Statement 1 is optional you can initate many values in statement1 (separated by comma).
+-Statement2
+Normally statement2 is used to evaluate the condition of the initial variable ,this is not always the case JavaScript doesnt care but statement2 is also optional .
+If statement 2 again if it returns false the loop will end , if you omit statement2 you must provide a break inside the loop otherwise the loop will never end and this will crash the browser.
+-Statement3 
+Often statement3 increments the value of the inital value ,this is not always the case JavaScript doesnt care either and statement 3 is also optional .
+Statement3 can do anything like negative increment (i--), postive increment(i=i+15),or anything else ,statement 3 can also be omitted(like when you increment your values inside the loop. )  
 
 
 
