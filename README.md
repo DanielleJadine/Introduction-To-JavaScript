@@ -701,6 +701,13 @@ fs.writeFile('example.txt', uint8ArrayData, (err) => {
 -Sails.js is a modern, MVC (Model-View-Controller) framework for building data-driven web applications in Node.js. It's designed to make it easy to build custom, enterprise-grade Node.js applications. 
  # Socket.oi
 Socket.io: Socket.io is a real-time web socket library for Node.js that enables bidirectional communication between web clients and servers. It provides a simple API for handling events and managing connections, making it ideal for building chat applications, multiplayer games, and real-time dashboards.
+# React.Js
+# What is React.js?
+-React is a popular JavaScript library used for building user interfaces (UI) in web applications. It was developed by Facebook and released to the public in 2013. React is known for its efficiency, scalability, and component-based architecture, which makes it easier to build complex UIs by breaking them down into reusable and modular components.
+-The core idea behind React is the concept of a virtual DOM (Document Object Model). The virtual DOM is a lightweight representation of the actual DOM, which is a tree-like structure that represents the HTML elements of a web page. React uses this virtual DOM to efficiently update and render components.
+-When building a React application, you define components, which are reusable building blocks of the UI. Each component represents a part of the user interface and can have its own state and properties. State represents the data that can change over time, while properties (props) are immutable values passed to a component from its parent component.
+-React uses a declarative syntax, which means you describe how your UI should look based on its current state, and React takes care of updating the actual DOM to reflect the desired state. When the state of a component changes, React efficiently updates only the necessary parts of the DOM, minimizing the number of actual manipulations and improving performance.
+# Reactjs.org documentation site
 
 
 
