@@ -917,13 +917,134 @@ import React, { useState } from 'react';
 # Using the useReducer
 -The useReducer hook is another state management hook in React, similar to useState, but more suited for managing state in complex scenarios. 
 -While useState is typically used for independent state variables, useReducer is useful when state transitions are more complex and involve multiple sub-values or when the next state depends on the previous one. It's inspired by the Redux library's reducer pattern.
+# Working with Uncontrolled Components
+-Working with uncontrolled components is a concept commonly associated with React , a popular JavaScript library for building user interfaces , React components can be controlled or uncontolled based on how theirstate is managed .
+# Controlled Components
+-These components whose state is entirely controlled by React,this means that React manages that state of these components by controlling the values of their inputs via props .
+-Whenever the state of a controlled component changes ,React re-renders the component with the new state.
+example-
+// Controlled component
+class ControlledInput extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { value: '' };
+  }
 
+  handleChange = (event) => {
+    this.setState({ value: event.target.value });
+  };
 
+  render() {
+    return (
+      <input
+        type="text"
+        value={this.state.value}
+        onChange={this.handleChange}
+      />
+    );
+  }
+}
 
+// Uncontrolled component
+function UncontrolledInput() {
+  let inputRef = React.createRef();
 
- 
+  const handleClick = () => {
+    alert('Input value: ' + inputRef.current.value);
+  };
 
- 
+  return (
+    <div>
+      <input type="text" ref={inputRef} />
+      <button onClick={handleClick}>Get Value</button>
+    </div>
+  );
+}
+
+# Uncontrolled Components
+-Conversely uncontroled components have their state managed by the DOM itself ,tis means that the state of these components is not controlled by React but rather by the DOM ,React doesnt keep track of their state directly, instead it allows the DOM to handle the state and you can access the current value using a ref or query the DOM directly.
+# Building a Custom Hook
+-Building a custom hook in React allows you to extract and reuse stateful logic from a component,custom hooks are regular JavaScript functions whose names start with "use" and can call other hooks if needed .
+-They provide a way to compose behaviour between components without duplicating code.
+# Choosing a Form Library
+-Choosing a form library in a frontend framework like React is an important decision that can significantly impact your development process and the quality of your application.
+# Asynchronous React
+Asynchronous programming in React refers to the pratice of managing asynchronous operations such as fetching data from an API ,handling user input or executing long-running tasks in a React applicaion.
+# Fetching Data with Hooks
+-Fetching data with hooks in React involves using the useState and useEffect hooks to manage the state of asynchronous data fetching operations. 
+-This approach allows you to handle data fetching logic directly within functional components, leveraging React's hooks API.
+# Displaying Data from an API
+-Displaying data from an API in a React application involves fetching the data from the API and then rendering it within your components.
+-This process typically includes using asynchronous functions to fetch the data, managing loading and error states, and rendering the data within your component's JSX.
+# Handling Loading States
+-Handling loading states in a React application involves providing feedback to users while data is being fetched from an API or during other asynchronous operations. 
+-Loading states are crucial for improving user experience by informing users that the application is actively processing their request.
+# Fetching Data with GraphQL
+-Fetching data with GraphQL in a React application involves using GraphQL to query data from a GraphQL API endpoint and then displaying that data within your components. 
+-GraphQL is a query language for APIs that allows clients to request only the data they need, which can improve performance and simplify data fetching logic.
+# Working with Render Props
+- Working with render props is a pattern in React where a component's behavior is customized by passing a function as a prop.
+- This function, often called the "render prop," allows the parent component to control what gets rendered by the child component.
+  -Render props provide a flexible and reusable way to share code between components, enabling composition and separation of concerns.
+# React Routers
+-React Router is a popular library for handling routing in React applications. 
+-It enables developers to manage navigation and define different views or pages within a single-page application (SPA).
+-React Router provides a declarative way to define routes and their corresponding components, allowing for easy navigation and URL manipulation without full page reloads.
+# Installing React Router v6
+-When developing a website with React, smooth navigation between different components, especially in a single-page application, is crucial. 
+-That's where React Router comes into play - it's the preferred solution for facilitating seamless transitions between pages by rendering various components.
+-Currently, we're utilizing React Router version six. 
+-To set it up, navigate to your project folder (in this instance, the react-app in chapter seven, lesson one) and install it via npm: 'npm install react-router-dom@6'. Once the installation is complete, make some adjustments to your App component - for now, let's remove any existing elements like 'Peaks' and 'List' and simply display the App. Launch the application using 'npm start', and you should see your App running on localhost:3000. 
+-Additionally, we're creating a few components such as Home, About, and Contact to simulate a basic website structure. 
+-With React Router integrated and our foundational pages in place, the next step will be configuring the router for seamless navigation in the subsequent section.
+# Configuring the Router
+-When interacting with external APIs, it's essential to account for various loading states: loading, success, and error.
+-Utilize the useState hook to manage these states effectively. Initialize loading, success, and error states along with their respective update functions.
+-Within the useEffect hook, set the loading state to true before initiating the fetch request. Once the data is received, update the loading state to false and handle any potential errors using the catch block. 
+-Adjust the component's rendering logic based on these states, displaying loading messages, data, or error messages as appropriate.
+# Incorporating the Link Component
+-Now that our components are rendering on distinct routes, let's address a usability concern - manually typing routes into the browser isn't user-friendly. 
+-It's time to introduce the 'Link' component from React Router.
+-Import it into your Home component and utilize it to generate links to other pages. 
+-For example, create links to '/about' and '/contact'. Once implemented, navigating to the home route will display these links, and clicking them will smoothly redirect you to the corresponding pages. 
+-The Link component serves as your solution for enhancing user-friendly navigation.
+ # Nesting links with React Router v6
+ -Let's enhance our application by introducing a child page to our About component called 'Our History'. 
+ -Begin by creating the History component along with its content. To nest it under About, we'll perform some route nesting.
+ -Navigate back to index.js, and within the About Route, nest a new Route for '/history', displaying the History component.
+ -Additionally, import the History component into your app file. Next, in App.js, import 'Outlet' from react-router-dom and position it where you want the child components to be rendered.
+ -This establishes a structured hierarchy - visit '/about' to view 'About Us', and '/about/history' to access 'Our History'. 
+ -Nested routes provide an effective method for organizing your application. Ensure to plan your route configuration meticulously, defining paths and associating them with the appropriate components.
+ # React Deployment
+-Deploying a React application involves making it available for users to access on the internet. 
+-This process typically involves building the application into static files and hosting them on a web server or a cloud platform.
+# Running Tests with Create React App
+-Rather than relying solely on 'npm start' to launch our React application locally, Create React App offers a convenient alternative. 
+-We can use 'npm test' to execute all tests within our application.
+-By checking the terminal output, we may discover failed tests, such as those in the 'App.test.js' file, which could signal coding issues or the absence of certain tests.
+-In the following section, we'll explore the process of writing tests and connecting them to our application's functions.
+# Testing Functions with Jest
+-Let's explore the process of testing small functions using Jest.
+-Within our source folder, let's create 'functions.js' to house our code, and 'functions.test.js' to contain our tests. 
+-Since Jest is already configured in Create React App, we can focus on writing our tests. As an example, let's test a 'timesTwo' function. 
+-We'll import it into the test file, invoke it with a value, and use Jest matchers to verify the expected result. 
+-Through this approach, testing enables us to identify issues such as incorrect exports, thereby enhancing the robustness of our code.
+# Using React Testing Library
+-Yet another valuable testing tool provided by Create React App is React Testing Library. 
+-We'll illustrate its usage by crafting a 'Star' component along with its respective test file. In this test, we employ queries to verify whether our component, even prior to being rendered in the DOM, contains the anticipated content. 
+-By automating this verification process, we can ensure that the correct content is appropriately positioned, thereby streamlining our testing procedure.
+# Testing Events with React Testing Library
+-Ensuring the accuracy of event handling is paramount, which is why we'll construct a 'Checkbox' component along with its corresponding test file. 
+-In this scenario, we'll leverage React's 'useReducer' hook. 
+-The test will ascertain whether toggling the checkbox results in its value changing to true. By employing queries such as 'getByLabelText' and 'fireEvent.click' to mimic events, we can effectively validate the behavior.
+-Testing serves as a safety net, pinpointing issues such as absent label associations and offering valuable insights into potential code-related challenges.
+# Deploying to Netlify
+ -Let's delve into deploying our React application using Netlify. Once logged in, we can initiate the process by adding a new site. 
+ -If GitHub integration isn't available, we have the option to deploy manually. Netlify requires the built version of our project, so we execute 'npm run build' to generate the build folder. 
+ -By simply dragging and dropping this folder onto Netlify, we kickstart the deployment process. 
+ -Netlify's intuitive interface offers seamless customization, allowing us to configure settings such as custom domains or enable HTTPS support effortlessly. 
+ -With our React application now live, it's easily accessible via the provided link. 
+ -Netlify streamlines the deployment journey, ensuring it's both swift and gratifying.
 
 
 
